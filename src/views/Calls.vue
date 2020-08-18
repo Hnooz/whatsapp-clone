@@ -4,7 +4,7 @@
             <div class="bg-center bg-cover flex h-12 items-center justify-center mx-4 photo px-5 rounded-full w-12"></div>
             <div :class="pepoles.length != (index + 1) ?'flex justify-between w-full border-b border-gray-800 mr-4 pb-3' : 'flex justify-between w-full mr-4 pb-3'">
                 <div>
-                    <h1 class="font-semibold text-gray-400">{{pepole.name}} {{index + 1}}</h1>
+                    <h1 class="font-semibold text-gray-400">{{pepole.name}}</h1>
                     <span class="flex  text-gray-500" v-show="pepole.missed.bool == true">
                         <svg class="w-6 h-6 text-red-700" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2426 7.17154L16.8284 5.75732L7.75739 14.8283L7.75739 10.2427H5.75739L5.75739 18.2427H13.7574V16.2427L9.17144 16.2427L18.2426 7.17154Z" fill="currentColor" /></svg>
                         ({{pepole.missed.count}}) {{pepole.callAt}}
