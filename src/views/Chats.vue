@@ -4,7 +4,7 @@
       <div class="bg-center bg-cover flex h-12 items-center justify-center mx-4 photo px-5 rounded-full w-12">
         <!-- <img src="../assets/img/profile.jpg" alt="" class="w-16 rounded-full mx-4 bg-cover"> -->
       </div>
-      <div class="flex justify-between w-full border-b border-gray-800 mr-4 pb-3">
+      <div :class="pepoles.length != (index + 1) ?'flex justify-between w-full border-b border-gray-800 mr-4 pb-3' : 'flex justify-between w-full mr-4 pb-3'">
         <div class="">
           <h1 class="font-semibold text-gray-400" >{{pepole.name}}</h1>
           <span class="font-light text-gray-600" v-if="pepole.message.length > 20">{{pepole.message.substr(0,20)}}...</span>
@@ -26,14 +26,9 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home',
-  components: {
-
-  },
 
   data() {
     return {
-      counts:7,
       pepoles: [
         {name:'hnooz',message:'i need some food',time:'20:10 PM'},
         {name:'Guest',message:'lemon lemon',time:'20:10 PM'},

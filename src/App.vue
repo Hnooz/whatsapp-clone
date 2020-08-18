@@ -14,6 +14,4 @@ export default {
 }
 </script>
 
-<style src="./assets/css/app.css" scopeed>
-
-</style>
+<style src="./assets/css/app.css" scopeed></style>
