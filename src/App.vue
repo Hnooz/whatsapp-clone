@@ -1,6 +1,6 @@
 <template>
   <div class="container max-w-md mx-auto"> 
-      <div class="bg-gray-800">
+      <div class="bg-gray-800 row">
         <div class="flex items-center justify-between pt-5 px-4">
           <h1 class="text-gray-600 font-semibold">Whatsapp</h1>
           <div class="flex text-gray-600">
@@ -12,10 +12,19 @@
             </i>
           </div>
         </div>
-        <div class="py-3">
-          <router-link class="border-b-2 text-gray-600 border-teal-600 pb-3 px-10" to="/" >Chats</router-link>
-          <router-link class="border-b-2 text-gray-600 border-teal-600 pb-3 px-10" to="/status">Status</router-link>
-          <router-link class="border-b-2 text-gray-600 border-teal-600 pb-3 px-10" to="/calls">Calls</router-link>
+        <div class="pt-3 flex justify-between">
+
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+            <router-link class="px-10" to="/" >Chats</router-link>
+          </div>
+          
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+            <router-link class="px-10" to="/status">Status</router-link>
+          </div>
+          
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+            <router-link class="px-10" to="/calls">Calls</router-link>
+          </div>
         </div>
       </div> 
 
