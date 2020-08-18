@@ -14,15 +14,15 @@
         </div>
         <div class="pt-3 flex justify-between">
 
-          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3 pb-3">
             <router-link class="px-10" to="/" >Chats</router-link>
           </div>
           
-          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3 pb-3">
             <router-link class="px-10" to="/status">Status</router-link>
           </div>
           
-          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3">
+          <div class="border-b-2 border-teal-500 text-gray-500 w-1/3 pb-3">
             <router-link class="px-10" to="/calls">Calls</router-link>
           </div>
         </div>
