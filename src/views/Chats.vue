@@ -46,5 +46,6 @@ export default {
 <style scoped>
 .photo{
   background-image: url('../assets/img/profile.jpg');
+  background-repeat: no-repeat;
 }
 </style>
