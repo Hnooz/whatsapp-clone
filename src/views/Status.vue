@@ -5,7 +5,7 @@
       
       <div class="flex items-center justify-between mr-4 mt-2">
         <div class="flex">
-          <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+          <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
           <div>
             <h1 class="font-medium text-gray-300">My status</h1>
             <span class="text-sm text-gray-600">Today, 12:56 AM</span>
@@ -20,7 +20,7 @@
       <h1 class="font-medium mx-4 my-2 text-gray-500 text-sm">Recent updates</h1>
       <div v-for="(pepole, index) in pepoles" :key="index">
         <div class="flex pb-3" v-show="pepole.show.recent == true">
-            <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
             <div :class="pepoles.length == (index + 1) ? 'border-b border-gray-800 mr-3 pb-2 w-full' : 'mr-3 pb-2 w-full'">
               <h1 class="font-medium text-gray-300 pl-1">{{pepole.name}}</h1>
               <span class="text-sm text-gray-600 pl-1">{{pepole.time}}</span>
@@ -30,7 +30,7 @@
       <h1 class="font-medium mx-4 my-2 text-gray-500 text-sm">Viewed updates</h1>
 
       <div class="flex pb-3">
-            <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
             <div class="border-b border-gray-800 mr-3 pb-2 w-full">
               <h1 class="font-medium text-gray-300 pl-1">Omer</h1>
               <span class="text-sm text-gray-600 pl-1">Today, 5:30 PM</span>
@@ -38,7 +38,7 @@
         </div>
 
       <div class="flex pb-3">
-            <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
             <div class="border-b border-gray-800 mr-3 pb-2 w-full">
               <h1 class="font-medium text-gray-300 pl-1">Panda</h1>
               <span class="text-sm text-gray-600 pl-1">Today, 2:30 AM</span>
@@ -46,7 +46,7 @@
         </div>
 
       <div class="flex pb-3">
-            <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
             <div class="border-b border-gray-800 mr-3 pb-2 w-full">
               <h1 class="font-medium text-gray-300 pl-1">Guest</h1>
               <span class="text-sm text-gray-600 pl-1">Yesterday, 11:30 PM</span>
@@ -54,7 +54,7 @@
         </div>
 
       <div class="flex pb-3">
-            <button class="bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
             <div class="mr-3 pb-2 w-full">
               <h1 class="font-medium text-gray-300 pl-1">Mosab</h1>
               <span class="text-sm text-gray-600 pl-1">Yesterday, 8:30 AM</span>

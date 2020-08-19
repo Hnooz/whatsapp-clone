@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="mt-3 flex" v-for="(pepole, index) in pepoles" :key="index">
-      <div class="bg-center bg-cover flex items-center justify-center mx-4 px-5 rounded-full w-12 h-12 photo ">
+      <div class="bg-no-repeat bg-center bg-cover flex items-center justify-center mx-4 px-5 rounded-full w-12 h-12 photo ">
         <!-- <img src="../assets/img/profile.jpg" alt="" class="w-16 rounded-full mx-4 bg-cover"> -->
       </div>
       <div :class="pepoles.length != (index + 1) ?'flex justify-between w-full border-b border-gray-800 mr-4 pb-3' : 'flex justify-between w-full mr-4 pb-3'">
