@@ -1,5 +1,6 @@
 <template>
     <div class="">
+        <Nav/>
         <div class="flex pt-3" v-for="(pepole, index) in pepoles" :key="index">
             <div class="bg-no-repeat bg-center bg-cover flex h-12 items-center justify-center mx-4 photo px-5 rounded-full w-12"></div>
             <div :class="pepoles.length != (index + 1) ?'flex justify-between w-full border-b border-gray-800 mr-4 pb-3' : 'flex justify-between w-full mr-4 pb-3'">
@@ -30,7 +31,11 @@
     </div>
 </template>
 <script>
+import Nav from '../components/Nav.vue'
 export default {
+    components:{
+        Nav
+    },
     data() {
         return {
             pepoles: [

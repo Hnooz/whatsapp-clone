@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    <Nav/>
     <div>
       
       <div class="flex items-center justify-between mr-4 mt-2">
@@ -26,85 +26,52 @@
               <span class="text-sm text-gray-600 pl-1">{{pepole.time}}</span>
             </div>
         </div>
-        <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
-        <div class="relative w-auto my-6 mx-auto max-w-6xl">
-        
-          <div class="relative flex flex-col w-full outline-none focus:outline-none">
-          
-            <div class="flex items-start justify-between relative rounded-t -mb-2 -mr-3">
-            
-              <button class=" ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" @click="toggleModal()">
-                <span title="close" class="bg-transparent text-red-700 opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                  ×
-                </span>
-              </button>
-            </div>
-            
-            <div class="-m-10 p-6 flex-auto">
-            
-                <div class="bg-center bg-cover flex items-center justify-center rounded-lg w-64 h-64 photo "></div>
-            
+        <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex" @mouseup="toggleModal()">
+          <div class="relative w-auto my-6 mx-auto max-w-6xl">        
+            <div class="relative flex flex-col w-full outline-none focus:outline-none">
+              <div class="-m-10 p-6 flex-auto">            
+                  <div class="bg-center bg-cover flex items-center justify-center rounded-lg w-64 h-64 photo "></div>            
+              </div>
             </div>
           </div>
         </div>
+
+        <div v-if="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        
       </div>
-      <div v-if="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
-      </div>
+
+
       <h1 class="font-medium mx-4 my-2 text-gray-500 text-sm">Viewed updates</h1>
 
        <div v-for="(pepole, index) in pepoles" :key="index">
-        <div class="flex pb-3" v-show="pepole.show.viewed == true">
-            <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
-            <div :class="pepoles.length != (index + 1) ? 'border-b border-gray-800 mr-3 pb-2 w-full' : 'mr-3 pb-2 w-full'">
-              <h1 class="font-medium text-gray-300 pl-1">{{pepole.name}}</h1>
-              <span class="text-sm text-gray-600 pl-1">{{pepole.time}}</span>
-            </div>
-        </div>
-        <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
-        <div class="relative w-auto my-6 mx-auto max-w-6xl">
-        
-          <div class="relative flex flex-col w-full outline-none focus:outline-none">
-          
-            <div class="flex items-start justify-between relative rounded-t -mb-2 -mr-3">
-            
-              <button class=" ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" @click="toggleModal()">
-                <span title="close" class="bg-transparent text-red-700 opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                  ×
-                </span>
-              </button>
-            </div>
-            
-            <div class="-m-10 p-6 flex-auto">
-            
-                <div class="bg-center bg-cover flex items-center justify-center rounded-lg w-64 h-64 photo "></div>
-            
+          <div class="flex pb-3" v-show="pepole.show.viewed == true">
+              <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
+              <div :class="pepoles.length != (index + 1) ? 'border-b border-gray-800 mr-3 pb-2 w-full' : 'mr-3 pb-2 w-full'">
+                <h1 class="font-medium text-gray-300 pl-1">{{pepole.name}}</h1>
+                <span class="text-sm text-gray-600 pl-1">{{pepole.time}}</span>
+              </div>
+          </div>
+
+        <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex" @mouseup="toggleModal()">
+          <div class="relative w-auto my-6 mx-auto max-w-6xl">        
+            <div class="relative flex flex-col w-full outline-none focus:outline-none">            
+              <div class="-m-10 p-6 flex-auto">            
+                  <div class="bg-center bg-cover flex items-center justify-center rounded-lg w-64 h-64 photo "></div>            
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div v-if="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        
+        <div v-if="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
       </div>
     </div>
 
 
-      <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
-        <div class="relative w-auto my-6 mx-auto max-w-6xl">
-        
-          <div class="relative flex flex-col w-full outline-none focus:outline-none">
-          
-            <div class="flex items-start justify-between relative rounded-t -mb-2 -mr-3">
-            
-              <button class=" ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" @click="toggleModal()">
-                <span title="close" class="bg-transparent text-red-700 opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                  ×
-                </span>
-              </button>
-            </div>
-            
-            <div class="-m-10 p-6 flex-auto">
-            
+      <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex" @mouseup="toggleModal()">
+        <div class="relative w-auto my-6 mx-auto max-w-6xl">        
+          <div class="relative flex flex-col w-full outline-none focus:outline-none">          
+            <div class="-m-10 p-6 flex-auto">            
                 <div class="bg-center bg-cover flex items-center justify-center rounded-lg w-64 h-64 photo "></div>
-            
             </div>
           </div>
         </div>
@@ -117,9 +84,11 @@
 
 <script>
 // import { Carousel, Slide } from 'vue-carousel';
+import Nav from '../components/Nav.vue'
 export default {
   name: "large-modal",
     components: {
+      Nav
     // Carousel,
     // Slide
   },

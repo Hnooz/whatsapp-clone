@@ -3,12 +3,19 @@ import Chats from '../views/Chats.vue'
 import Status from '../views/Status.vue'
 import Calls from '../views/Calls.vue'
 import Camera from '../views/Camera.vue'
+import Settings from '../views/Settings.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Chats',
-    component: Chats
+    component: Chats,
+    // children: [
+    //   {
+    //     path: 'settings',
+    //     component: Settings
+    //   },
+    // ]
   },
   {
     path: '/status',
@@ -24,6 +31,11 @@ const routes = [
     path: '/camera',
     name: 'Camera',
     component:Camera
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component:Settings
   },
 ]
 
