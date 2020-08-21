@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'teal-green-dark' :'#00171f',
+        'teal-green-dark' :'#131b20',
         'teal-green-light':'#128C7E',
-        'gray-light':'#343a40',
+        'gray-light':'#2a2f32',
       }
     },
   },

@@ -1,6 +1,8 @@
 <template>
   <div>
     <Nav/>
+
+    
     <div>
       
       <div class="flex items-center justify-between mr-4 mt-2">
@@ -46,7 +48,7 @@
        <div v-for="(pepole, index) in pepoles" :key="index">
           <div class="flex pb-3" v-show="pepole.show.viewed == true">
               <button class="bg-no-repeat bg-center bg-cover border-2 border-gray-300 flex focus:outline-none h-12 items-center justify-center mx-4 outline-none photo px-5 rounded-full w-12" type="button" style="transition: all .15s ease" v-on:click="toggleModal()"></button>
-              <div :class="pepoles.length != (index + 1) ? 'border-b border-gray-800 mr-3 pb-2 w-full' : 'mr-3 pb-2 w-full'">
+              <div :class="pepoles.length != index+2  ? 'border-b border-gray-800 mr-3 pb-2 w-full' : 'mr-3 pb-2 w-full'">
                 <h1 class="font-medium text-gray-300 pl-1">{{pepole.name}}</h1>
                 <span class="text-sm text-gray-600 pl-1">{{pepole.time}}</span>
               </div>

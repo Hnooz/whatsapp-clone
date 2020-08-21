@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-gray-800 row">
+    <div class="bg-gray-light row">
         <div class="flex items-center justify-between pt-5 px-4">
-          <h1 class="text-gray-600 font-semibold">Whatsapp</h1>
-          <div class="flex text-gray-600">
+          <h1 class="text-gray-500 font-semibold">Whatsapp</h1>
+          <div class="flex text-gray-500">
             <button type="button" class="px-4 focus:outline-none hover:text-gray-400">
               <svg viewBox="0 0 20 20" fill="currentColor" class="search w-4 h-4"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
             </button>
@@ -32,7 +32,7 @@
         
           <div class="relative flex flex-col w-full outline-none focus:outline-none" v-show="$route.name == 'Chats'">
             
-            <div class="-mr-3 mt-1 bg-teal-green-dark flex-auto h-48 ml-12 p-3 w-48">
+            <div class="-mr-3 mt-1 bg-gray-light flex-auto h-48 ml-12 p-3 w-48">
               <ul class="text-gray-300">
                 <li class="pb-3">New group</li>
                 <li class="pb-3">New broadcast</li>
@@ -48,7 +48,7 @@
 
           <div class="relative flex flex-col w-full outline-none focus:outline-none" v-show="$route.name == 'Status'">
             
-            <div class="-mr-3 mt-1 bg-teal-green-dark flex-auto h-20 ml-12 p-3 w-48">
+            <div class="-mr-3 mt-1 bg-gray-light flex-auto h-20 ml-12 p-3 w-48">
               <ul class="text-gray-300">
                 <li class="pb-3">Status privacy</li>
                 <li class="pb-6">
@@ -61,7 +61,7 @@
 
           <div class="relative flex flex-col w-full outline-none focus:outline-none" v-show="$route.name == 'Calls'">
             
-            <div class="-mr-3 mt-1 bg-teal-green-dark flex-auto h-20 ml-12 p-3 w-48">
+            <div class="-mr-3 mt-1 bg-gray-light flex-auto h-20 ml-12 p-3 w-48">
               <ul class="text-gray-300">
                 <li class="pb-3">Clear call log</li>
                 <li class="pb-6">
