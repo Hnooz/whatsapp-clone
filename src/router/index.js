@@ -4,11 +4,15 @@ import Status from '../views/Status.vue'
 import Calls from '../views/Calls.vue'
 import Camera from '../views/Camera.vue'
 import Settings from '../views/Settings.vue'
-import Account from '../views/settings/Account.vue'
+import Account from '../views/settings/Account/Account.vue'
 import Chat from '../views/settings/Chat.vue'
 import Notifications from '../views/settings/Notifications.vue'
 import Data from '../views/settings/Data.vue'
 import Help from '../views/settings/Help.vue'
+import Privacy from '../views/settings/Account/Privacy.vue'
+import Security from '../views/settings/Account/Security.vue'
+import Verification from '../views/settings/Account/Verification.vue'
+import ChangeNumber from '../views/settings/Account/ChangeNumber.vue'
 
 const routes = [
   {
@@ -61,6 +65,27 @@ const routes = [
     name: 'Help',
     component:Help
   },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component:Privacy
+  },
+  {
+    path: '/security',
+    name: 'Security',
+    component:Security
+  },
+  {
+    path: '/verification',
+    name: 'Verification',
+    component:Verification
+  },
+  {
+    path: '/changenumber',
+    name: 'ChangeNumber',
+    component:ChangeNumber
+  },
+
 ]
 
 const router = createRouter({
