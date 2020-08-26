@@ -9,7 +9,6 @@
                 <span class="mx-5">Privacy</span> 
             </div>
         </div>
-        <Toggle/>
         <div class="p-5">
             <h1 class="font-medium pb-3 text-teal-500">Who can see my personal info</h1>
             <p class="text-gray-600 text-sm pb-8">if you don't share your last Seen, you won't be able to see other pepole Last Seen</p>
@@ -67,10 +66,3 @@
         </div>
     </div>
 </template>
-
-<script>
-import Toggle from '../../../components/Toggle'
-export default {
-    components:{Toggle}
-}
-</script>
