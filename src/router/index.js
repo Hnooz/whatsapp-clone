@@ -13,7 +13,8 @@ import Privacy from '../views/settings/Account/Privacy.vue'
 import Security from '../views/settings/Account/Security.vue'
 import Verification from '../views/settings/Account/Verification.vue'
 import ChangeNumber from '../views/settings/Account/ChangeNumber.vue'
-
+import RequestInfo from '../views/settings/Account/RequestInfo.vue'
+import DeleteAccount from '../views/settings/Account/DeleteAccount'
 const routes = [
   {
     path: '/',
@@ -84,6 +85,16 @@ const routes = [
     path: '/changenumber',
     name: 'ChangeNumber',
     component:ChangeNumber
+  },
+  {
+    path: '/requestinfo',
+    name: 'RequestInfo',
+    component:RequestInfo
+  },
+  {
+    path: '/deleteaccount',
+    name: 'DeleteAccount',
+    component:DeleteAccount
   },
 
 ]

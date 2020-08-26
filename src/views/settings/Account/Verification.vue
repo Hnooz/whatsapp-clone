@@ -24,7 +24,7 @@
         <!-- </div> -->
 
         <div class="flex justify-center">
-            <button type="button" class="absolute bg-teal-500 bottom-0 font-medium my-4 px-5 py-2 rounded text-gray-900 text-sm">ENABLE</button>
+            <button type="button" class="absolute bg-teal-500 bottom-0 font-medium my-4 px-5 py-2 rounded text-gray-900 text-sm focus:outline-none">ENABLE</button>
         </div>
     </div>
 </template>

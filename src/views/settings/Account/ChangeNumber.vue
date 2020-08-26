@@ -31,7 +31,7 @@
         <!-- </div> -->
 
         <div class="flex justify-center">
-            <button type="button" class="absolute bg-teal-500 bottom-0 font-medium my-4 px-5 py-2 rounded text-gray-900 text-sm">NEXT</button>
+            <button type="button" class="absolute bg-teal-500 bottom-0 font-medium my-4 px-5 py-2 rounded text-gray-900 text-sm focus:outline-none">NEXT</button>
         </div>
     </div>
 </template>
