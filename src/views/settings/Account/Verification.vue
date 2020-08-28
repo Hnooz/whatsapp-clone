@@ -1,13 +1,7 @@
 <template>
     <div>
         <div class="bg-gray-light p-3 text-gray-400">
-            <div class="flex font-semibold ">
-                <router-link to="/account">
-                     <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-left w-6 h-6"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                </router-link>
-                
-                <span class="mx-5">Two-step verification</span> 
-            </div>
+            <TitleNav title="Two-step verification" url="/account"></TitleNav>
         </div>
 
         <div class="bg-teal-100 flex h-24 items-center justify-center mx-auto rounded-full w-24 my-6">
@@ -28,3 +22,12 @@
         </div>
     </div>
 </template>
+
+<script>
+import TitleNav from '../../../components/TitleNav'
+export default {
+    components:{
+        TitleNav
+    }
+}
+</script>

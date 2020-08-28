@@ -1,13 +1,7 @@
 <template>
     <div>
-         <div class="bg-gray-light p-3 text-gray-400">
-            <div class="flex font-semibold ">
-                <router-link to="/account">
-                     <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-left w-6 h-6"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                </router-link>
-                
-                <span class="mx-8">Delete my account</span> 
-            </div>
+        <div class="bg-gray-light p-3 text-gray-400">
+            <TitleNav title="Delete my account" url="/account"></TitleNav>
         </div>
 
         <div class="mx-5">
@@ -37,8 +31,14 @@
                 <h1 class="text-gray-600 text-xs mt-4">Country</h1>
                
                 <div class="border-b-2 border-gray-600 flex items-center justify-between ml-1 mx-1 py-1">
-                    <h1 class="text-gray-400">Sudan</h1>
-                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-down text-gray-500 w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <!-- <h1 class="text-gray-400">Sudan</h1>
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-down text-gray-500 w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> -->
+                    <select name="" id="" class="bg-transparent outline-none text-gray-400 w-full">
+                        <option value="1" class="bg-teal-green-dark text-gray-100">Sudan</option>
+                        <option value="1" class="bg-teal-green-dark text-gray-100">Egypt</option>
+                        <option value="1" class="bg-teal-green-dark text-gray-100">KSA</option>
+                        <option value="1" class="bg-teal-green-dark text-gray-100">UN</option>
+                    </select>
                 </div>
 
                 <h1 class="text-gray-600 text-xs mt-4">Phone</h1>
@@ -59,3 +59,11 @@
         </div>
     </div>
 </template>
+<script>
+import TitleNav from '../../../components/TitleNav'
+export default {
+    components:{
+        TitleNav
+    }
+}
+</script>

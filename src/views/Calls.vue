@@ -47,6 +47,10 @@ export default {
       ]
         }
     },
+
+    methods: {
+        con(){}
+    },
 }
 </script>
 
