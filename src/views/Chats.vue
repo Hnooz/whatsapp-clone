@@ -3,7 +3,7 @@
     <Nav/>
     <div class="flex mt-3" v-for="(pepole, index) in pepoles" :key="index">
       <div class="w-12 h-12 py-1 mx-4">
-        <img :src="pepole.url" class="w-full h-full rounded-full"  style="transition: all .15s ease" @click="toggleModal()"/>
+        <img :src="pepole.url" class="w-full h-full rounded-full"  style="transition: all .15s ease" @click="toggleModal(pepole)"/>
       </div>
       <div :class="pepoles.length != (index + 1) ?'flex justify-between w-full border-b border-gray-800 mr-4 pb-3' : 'flex justify-between w-full mr-4 pb-3'">
         <div class="">
@@ -19,14 +19,16 @@
         </div>
       </div>
 
-      <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none" @mouseup="toggleModal()">
+      <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none" @mouseup="closeModal()">
         <div class="relative w-auto max-w-6xl mx-auto my-6 mb-64">
         
           <div class="relative flex flex-col w-full outline-none focus:outline-none">
           
             <div class="flex-auto p-6 -m-10">
             
-                <div class="flex items-center justify-center w-56 h-56 bg-center bg-cover rounded-lg photo"></div>
+                <div class="flex items-center justify-center w-56 h-56 rounded-lg">
+                   <img :src="img" class="w-full h-full"  style="transition: all .15s ease"/>
+                </div>
                 
             </div>
 
@@ -57,7 +59,7 @@ export default {
   data() {
     return {
       showModal: false,
-      
+      img:'',
       pepoles: [
         {name:'Panda',message:'look what i have done',time:'10:48 PM', mute:false, msgCount:6,url:require('../assets/img/screen-post-jGpgpFsCECc-unsplash.jpg'),},
         {name:'Guest',message:'lemon lemon',time:'19:30 PM', mute:false, msgCount:2,url:require('../assets/img/james-owen-442400-unsplash.jpg'),},
@@ -71,10 +73,12 @@ export default {
   },
 
   methods: {
-    toggleModal(){
+    toggleModal(pepole){
+      this.img = pepole.url
       this.showModal = !this.showModal;
     },
     closeModal(){
+      this.img = ''
       this.showModal = !this.showModal;
     }
   },
